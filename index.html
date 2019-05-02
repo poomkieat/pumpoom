@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ICOFFEE</title>
+        <link rel='stylesheet' href='css/bootstrap.css'>
+    </head>
+    <body>
+        <div class = 'container'>
+        <h1>ICOFFEE</h1>
+        <p class='test1'>Welcome to HTML5</p> 
+        <button class='btn btn-primary test2'>Shop</button>
+        <button class='btn btn-primary'>Home</button>
+        <p class='test'>story</p>
+        </div>
+
+        <div class='container'>
+            <img src ='husky.jpg' class='img-fluid photo'> 
+            <p>our story</p>
+        </div>
+    </body>
+    <style>
+        h1 { color: brown; } /*ใส่สีน้ำตาลที่คำสั่ง h1*/
+        p { background: lightgreen; /*ใส่สีเขียวที่คำสั่ง h1*/
+            padding-left: 20px; } 
+        .photo { margin-top:8px; filter: blur(10px); transition: filter 1s linear; } /* ใส่fiter blur และระยะการเปลี่ยนแปลงแบบ linear*/
+        .photo:hover {filter: blur(0);} /* เมื่อทำการชี้ */
+
+        .test { color: hotpink; } /* ใส่สีตัวอักษรที่ class test */
+
+        .test1 { background: orange; } /* ใส่สีพื้นหลังที่ class test1 */
+
+        .test2 { background: blue; 
+                 border-color: black; /* ใส่ขอบสีดำที่ class test2 */
+                 width: 100px; /* เพิ่มความยาว */
+                 margin-right: 20px; } /* ขยับขวา  */
+        
+        .test2:hover {background: pink; 
+                      border-color: hotpink; 
+                      color: hotpink;} /* ใส่สีพื้นหลัง ขอบ ตัวอักษร ที่ class test2 หลังชี้ */
+    </style>
+</html>
+
+<!--
+อธิบาย ฟ้อนของ  html คือ serif แต่นิยมใช้ san-serif โดยใช้  font end framework โหลดที bootstrap 
+-->
