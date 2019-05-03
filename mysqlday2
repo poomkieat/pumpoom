@@ -1,0 +1,52 @@
+เริ่มต้นสร้าง mysql
+
+อัพเดท apt
+    sudo apt update
+
+ติดตั้ง mysql
+    sudo apt install mysql-server
+
+เลือกใช้งาน mysql
+    sudo mysql
+
+โชว์ database ที่มีทั้งหมด 
+    show database;    
+
+การสร้าง database & table
+    create database ..ชื่อ database ที่ต้องการสร้าง..; 
+    create table ..ชื่อ table ที่ต้องการสร้าง..; (varchar(จำนวน),area float,staff int);
+
+เลือกใช้งาน
+    use ..ชื่อ database ที่ต้องการใช้งาน..; 
+
+การใส่ข้อมูลใน table
+    insert into ..ชื่อ table ที่ต้องการใส่..; (name,area,staff) //(ในวงเล็บแล้วแต่จะใส่)
+    values ('aaaa',00.00,00); //(ในวงเล็บใส่ตามหัวข้อด้านบน)
+
+การลบ database & table
+    drop database ..ชื่อ database ที่ต้องการลบ..;  
+    drop table ..ชื่อ database ที่ต้องการลบ..;  
+
+เลือกดูข้อมูล
+    select *from ..ชื่อ database ที่ต้องการดู..;
+            เช่น select *from product;
+    select *from ..ชื่อ database ที่ต้องการดู.. where price <= 130; //(หาข้อมูลใน table ที่ price ไม่เกิน 130)
+                                                          //(<= ไม่เกิน  >= เกิน)
+            เช่น select *from product where price <= 130;
+
+การลบข้อมูลใน table 
+    delete from table where ..ชื่อหัวข้อที่ตั้งไว้.. = '..ข้อมูลที่ต้องการลบ..';
+            เช่น  delete from table where name ='aaa';
+
+การแก้ไขข้อมูลใน table
+    update ..ชื่อ database.. set .หัวข้อที่ต้องการแก้ไข.. = ..แก้ไขเป็น.. where ..ชื่อหัวข้อที่ตั้งไว้.. = '..data ที่ตั้งไว้..' and ..ชื่อหัวข้อที่ตั้งไว้..  =  '..data ที่ตั้งไว้..';
+            เช่น update product set price = 100 where name latte = '10.00' and size = 's'; 
+
+การเพิ่ม หัวข้อ ใน database
+    alter table ..ชื่อ database.. add ..ชื่อหัวข้อ.. ..ชนิดหัวข้อเช่น int float char..; //(หัวข้อที่ทำการเพิ่มเข้าไป ในตารางจะมีค่า เป็น null ต้องเพิ่มข้อมูลโดยการใช้ ีupdate)
+            เช่น alter table product add active char;
+
+การใช้ 
+
+การออกจาก -> หากมีการติด Error
+    ctrl+c และ enter 
