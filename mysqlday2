@@ -50,3 +50,6 @@
 
 การออกจาก -> หากมีการติด Error
     ctrl+c และ enter 
+
+การออกจาก  mysql 
+    พิมพ์  exit และ enter
