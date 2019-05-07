@@ -1,0 +1,125 @@
+การสร้าง Google Cloud Platform
+1.Login
+2.เลือก Compute engine
+3,เลือก Vm instances 
+4.เลือก Create instances
+- ใส่ชื่อ 
+- เลือก Region ที่ใกล้เคียงที่สุดเพื่อความเร็ว
+- เลือก Machine Type เป็น  Micro
+- Boot Disk เลือก Ubuntu 19.04 หรือเวอชั่นล่าสุดแบบตัวเต็ม
+- แล้ว Create
+5.สร้างเสดแล้วจะโชว์ รายการที่สร้าง แล้วกด SSH เพื่อใช้งาน
+
+คำสั่งการใช้งาน
+$ cal                                        //เรียกปฏิทิน(calender)
+$ pwd                                        //แสดงที่อยู่โฟลเดอขณะนี้(show position)
+$ mkdir ..ชื่อโฟลเดอ..                          //สร้างโฟลเดอ(create folder)
+$ ls                                         //แสดงชื่อไฟล์(show list)
+$ cd ..ชื่อโฟลเดอ..                             //เลือกเข้าโฟลเดอนั้นๆ(entrance)
+$ cd ..                                      //กลับไปโฟลเดอก่อนหน้า(back)
+$ rmdir ..ชื่อโฟลเดอ..                          //ลบโฟลเดอนั้นๆ(delete) ลบได้เฉพาะโฟลเดอว่าง
+$ vi ..ชื่อไฟล์และนามสกุล .txt..                   //สร้างไฟล์ที่สามารถพิมพ์ได้(create file and insert data) กด  i เพื่อเปิดโหมดพิมพ์
+                                             //esc เพื่อออกจากโหมดพิมพ์ และ :w + enter เพื่อ save
+                                             //:q + enter เพื่อ ออก
+$ cat ..ชื่อไฟล์และนามสกุล .txt..                  //แสดงข้อมูลในไฟล์(show) สามารถใช้ได้มากกว่า 2 ไฟล์
+$ cp  ..ชื่อไฟล์และนามสกุล .txt.. ..ชื่อโฟลเดอ..      //เป็นการก็อบไฟล์(copy) โดย คำสั่ง + ชื่อไฟล์ + ชื่อโฟลเดอที่ต้องการวาง
+$ cp  ..ชื่อไฟล์และนามสกุล .txt.. และ .             //เป็นการก็อบไฟล์(copy) โดย คำสั่ง + ชื่อไฟล์ + . (นอกโฟลเดอ)
+$ rm ..ชื่อโฟลเดอ../..ชื่อไฟล์และนามสกุล .txt..       //เป็นการลบไฟล์(delete) โดย คำสั่ง + ชื่อโฟลเดอ + ชื่อไฟล์
+$ mv ..ชื่อไฟล์และนามสกุล .txt.. ..ชื่อโฟลเดอ..       //เป็นการย้ายไฟล์(cut) โดย คำสั่ง + ชื่อไฟล์ + ชื่อโฟลเดอที่ต้องการวาง
+$ mv ..ชื่อโฟลเดอ.. /tmp                        //เป็นการ move ใส่ temp (recycle bin) เมื่อ restart ข้อมูลใน temp จะหาย
+
+คำสั่งเฉพาะ ubuntu or elementaly os
+sudo apt install nginx                       //ติดตั้ง nginx web server
+sudo vi /var/www/html/index.html             //สร้างหน้าเว็บและทำการแก้ไข ใช้ externel ip ในการดูเช่น  http://35.247.155.42/ 
+sudo apt install mysql-server                //ติดตั้ง mysql server
+
+service nginx status                         //เช็ค status
+service mysql status
+
+sudo service nginx start                     //เปิดการใช้งาน
+sudo service nginx stop                      //หยุดการใช้งาน
+man ping                                     //โชว์วิธีการใช้งาน กด q เพื่อออก
+
+show databases;                              //แสดง database 
+create database ..ชื่อ Database..;              //สร้าง database
+use ..ชื่อ Database..;                          //ใช้งาน database
+
+select md5('รหัสผ่าน');                         //เข้ารหัสแบบ md5
+select sha2('รหัสผ่าน',จำนวนบิท)                  //เข้ารหัสแบบ sha2
+select sha2('รหัสผ่าน'+ 'รหัสผ่านเจ้าของเว็บ')        //เข้ารหัสแบบ sha2 ที่ยากกว่า
+
+ตัวอย่างการสร้างข้อมูล
+สร้างตาราง
+create table member 
+( id int auto_increment unique not null,
+    email varchar(200) unique not null,
+    gender char,
+    frist_name varchar(200) not null,
+    last_name varchar(200) not null,
+    middle_name varchar(200) ,
+    password varchar(200) not null);
+
+นำเข้าข้อมูล
+insert into member(email,frist_name,last_name,password)
+values('mark@fb.com','mark','zuckerberg',sha2('mark123',512));
+
+insert into member(email,frist_name,last_name,password)
+values('bill@msn.com','bill','gates',sha2('bill123',512));
+
+แสดงข้อมูลที่นำเข้า 
+select id,email,gender,frist_name,middle_name,last_name,
+        left(password,5) from member;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
