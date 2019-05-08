@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>icar</title>
+    </head>
+    <body>
+        <div>welcome to icar</div>
+        <button onclick ='show()'>test</button> //ใช้กับ ฟังชั่น show line 105 
+        
+        <button onclick ='f()'>red</button> 
+        <button onclick ='g()'>blue</button>
+        <button onclick ='total()'>show</button> //ใช้กับฟังชั่น total line 114
+        <script>
+        //alert('i love you')               //แสดงข้อความ
+        //prompt('enter your name')         //สร้างกล่องข้อความแบบคำถาม
+
+        //var x = prompt('enter your name') //เก็บคำตอบใส่ x
+        //alert('hello ' + x)               //แสดง hello ตามด้วยคำตอบที่อยู่ใน x
+        
+        //var price = prompt('enter price'); //เก็บคำตอบใส่ price
+        //alert('total is ' + price * 1.08); //แสดง total is ตามด้วยคำตอบที่อยู่ใน price คูณ 1.08
+       
+        /*var data = 7
+        data = 7.5
+        data = 'bill gates'
+        data = 8 //typeof data -> 'string'
+        alert = 8 //typeof data -> 'number'
+        alert(typeof data)*/
+
+        /*var price = prompt('enter price')
+        if (price >= 100) { alert('total is ' + price * 0.95)}
+        if (price < 100) { alert('total is ' + price)}*/
+        
+        /*var score = prompt('enter score')
+        if (score < 50) { alert('fail')}
+        if (score >= 50) { alert('pass')}*/
+
+        /*var score = prompt('enter score')
+        var grade = 'F'
+        if (score >= 50) (grade = 'D')
+        if (score >= 60) (grade = 'C')
+        if (score >= 70) (grade = 'B')
+        if (score >= 80) (grade = 'A')
+        alert ('you grade is ' + grade)*/
+
+        /*ชนิดของฟังชั่น 
+        1.function  f(x) { }
+        2.var f = function (x) { }          //Unhoisted
+        3.var f = x => 1.0125 * x           //Arrow function
+        4.const f =                         //แบบ 2 หรือ 3 ก็ได้ ข้อดีคือห้าม replace*/
+
+        /*function f(x) {return 2 * x }
+        var y = f(5)
+        alert(y)*/
+
+        /*function f(x) {return 2 * x }
+        function f(n) {
+            if (n == 0) return 1
+            return 2 * f(n-1)
+        }
+        var y = f(3)
+        alert(y)*/
+
+        /*var x = 5
+        var y = '5'
+
+
+        // == ใช้เปรียบเทียบค่า หรือ value
+        if (x == y) {
+            alert(1)
+        }
+        
+
+        // === ใช้เปรียบเทียบค่า และ ชนิด
+        //alert( typeof x )                 //number
+        //alert( typeof y )                 //string
+        if (x === y) {
+            alert(3)
+        }else{
+            alert(9)
+        }*/
+
+        /*function convert(m) {
+            return 3.28 * m 
+        }
+        var f = convert(7.5)
+        alert(f)*/
+
+        /*function total(b) {
+            return b + (1.25/100 * b)       //หาดอกเบี้ยเป็น เปอเช็น 1.25%
+        }
+        var b = total(1000)
+        alert(b)*/
+
+
+        //สามารถประกาศตัวแปรก่อนหรือหลังก็ได้
+        /*function total(b) {
+            return 1.0125 * b
+        }
+        var t = total( total(80000))
+        alert(t)*/
+
+        /*var t = total(80000)
+        alert(t)
+        function total(b) {
+            return 1.0125 * b 
+        }*/
+
+        /*function show() {
+            alert('i love u')
+        }*/
+
+
+        var left = 0
+        var right = 0
+        function f() {
+            left = left + 1
+        }
+        function g() {
+            right = right + 1 
+        }
+        function total() {
+            alert('blue = ' + left + ', red = ' + right)
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
