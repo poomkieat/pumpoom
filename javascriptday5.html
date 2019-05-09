@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>icar</title>
+        <meta charset = 'UTF8'>
+    </head>
+    <body>
+        <div>welcome to icar</div>
+        <div id='test'>...</div>
+
+        <button onclick='show()' id='welcome'>test</button> //line 68
+        
+        <button onclick='change()' id ='demo'>love</button> //line 75 
+
+        <input id='price'>                                  //line 84
+        <button onclick='show1()'>total</button>
+        <div id ='result'>...</div>
+
+        <button onclick='change(-1)'>Decrease</button>      
+        <button onclick='change(+1)'>Increase</button>      //line 95
+        <div id='current'>25</div>
+
+        <div id='menu'>...</div>
+
+        <button onclick='add()'>add</button>
+        <button onclick='clean()'>clear</button>
+        <div id ='field'>...</div>
+
+        <div id ='page'>...</div>
+    <script>
+        //การเกิด Error
+        /*var f
+        f = 7               //typeof f -> 'number'
+        f = 'welcome'       //typeof f -> 'string'
+        f = function(){}    //typeof f -> 'function'
+        alert(typeof f)*/
+
+        /*var f
+        f = 7               //typeof f -> 'number'
+        f = 'welcome'       //typeof f -> 'string'
+        f = function(){}    //typeof f -> 'function'
+        const y = 7*/
+
+        /*let z = 7
+        {
+            let z = 8
+            //alert(z)      //8 //alert ข้างในจะประกาศค่าข้างในคือ 8
+        }
+            //alert(z)      //alert ข้างนอกจะประกาศค่าข้างในคือ 7*/
+
+        /*var z = 7
+        {
+            var z = 8
+            //alert(z) //8  //alert ข้างในจะประกาศค่าข้างในคือ 8
+        }
+            alert(z)        //alert ข้างนอกจะประกาศค่าข้างในคือ 7*/
+xxx
+        //alert บอกชนิดของสามเหลี่ยม
+        /*var a = 10 , b = 10 , c = 10
+        var result = 'ด้านไม่เท่า'
+        if (a == b) {result = 'หน้าจั่ว'}
+        if (b == c) {result = 'หน้าจั่ว'}
+        if (c == a) {result = 'หน้าจั่ว'}
+            /*if (a == b) {
+            if (b == c) {
+            result = 'ด้านเท่า' }}
+                //alert(result)
+        if (a == b || b == c || c == a) { //&& หรือ
+            result = 'หน้าจั่ว'
+        if (a == b && b == c && c == a) { //&& และ
+            result = 'ด้านเท่า'
+        }
+        var element = document.getElementById('test')
+        element.innerText = result */
+
+xxx
+        //กดปุ่มแล้วแสดงคำว่า  'bill gates'
+        /*function show() {
+            var element = document.getElementById('welcome') //รับข้อมูลจากปุ่ม id welcome
+            element.innerHTML = 'bill gates'  แสดงข้อความ 'bill gates' ในหน้าเว็บ
+        }*/
+
+xxx
+        //เปลียนคำ เมื่อกดปุ่ม
+        /*function change() {
+            var button = document.getElementById('demo')        //รับข้อมูลจากปุ่ม id demo
+            var current = button.innerText                      //รับค่าล่าสุดจากปุ่มและเปลี่ยน Text ในปุ่ม
+            if (current == 'love') (button.innerText = 'hate')  //เปลี่ยนคำว่า love เป็น hate
+            if (current == 'hate') (button.innerText = 'love')
+        }*/
+
+xxx
+        //เก็บค่า price เข้า p ไปคำนวนใน t แล้วประกาศที่ r
+        /*function show1() {
+            var p = document.getElementById('price')
+            var v = +(p.value) || 0                     //หากใส่ค่าผิดเช่น 0 เป็น o จะแสดงเป็น 0 แทน
+            var t = p.value * 1.08
+            var r = document.getElementById('result')
+            r.innerText = 'total is ' + t
+        }*/
+
+
+xxx
+        /*function change(x){
+            var element = document.getElementById('current')    //นำค่าจาก current
+            element.innerText = + element.innerText + x         //มากเพิ่มหรือลดจาก X ซึ่งนำค่ามาจาก ปุ่ม คือ +1 -1
+        }*/
+
+
+xxx
+        /*var menu = document.getElementById('menu')
+        menu.innerHTML = '<button>Latte</button>'
+        var i = 0
+        while (i < 3) {
+            menu.innerHTML = menu.innerHTML + '<button>Americano</button>'
+            i = i + 1
+        }*/
+
+xxx
+        /*function add() {
+            var f = document.getElementById('add')
+            f.innerHTML = f.innerHTML + '<button>test</button>'
+        }
+        function clean() {
+            var f = document.getElementById('field')
+            f.innerHTML = ''
+        }*/
+
+xxx
+        var page = document.getElementById('page')
+        page.innerHTML = page.innerHTML + '<button>first</button>'
+        var i = 1
+        while (i <= 3)
+        {
+            page.innerHTML = page.innerHTML + '<button>' + 1 + '</button>'
+            i = i + 1
+        }
+        page.innerHTML = page.innerHTML + '<button>last</button>'
+
+    </script>
+    </body>
+</html>
