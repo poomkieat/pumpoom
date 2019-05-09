@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+		<button onclick ="f()">red</button> 
+        <button onclick ="g()">blue</button>
+        <button onclick ="total()">show</button> 
+</body>
+	<script>
+		var left = 0
+        var right = 0
+        function f() {
+            left = left + 1
+        }
+        function g() {
+            right = right + 1 
+        }
+        function total() {
+            alert('blue = ' + left + ', red = ' + right)
+        }
+	</script>
+</html>
