@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<button onClick="change(+1)">Decrease</button>
+	<button onClick="change(-1)">Increase</button>
+	<div id="current">25</div>
+</body>
+	<script>
+	function change(x){
+		var element = document.getElementById('current')	//นำค่าจาก current
+		element.innerText = + element.innerText + x		//ค่า current บวกกับ x
+	}
+	</script>
+</html>

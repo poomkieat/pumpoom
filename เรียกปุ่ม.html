@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<div id="menu">...</div>
+</body>
+	<script>
+	var menu = document.getElementById('menu')	
+	menu.innerHTML = '<button>latte</button>'		//สร้างปุ่มแรกชื่อ latte
+		var i = 0
+		while ( i < 3) {
+			menu.innerHTML = menu.innerHTML + '<button>americano</button>' 		//สร้างปุ่ม ameracano ออกมา 3 ปุ่ม
+			i = i + 1
+		}
+	</script>
+</html>

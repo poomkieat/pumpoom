@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<button onClick="add()">add</button>
+	<button onClick="clean()">clear</button>
+	<div id="field">...</div>
+</body>
+	<script>
+	function add(){
+		var f = document.getElementById('field')
+		f.innerHTML = f.innerHTML + '<button>test</button>'		//ฟังชั่นสร้างปุ่มเมื่อกดปุ่ม add ในกรณีนี้จะสร้างออกมาได้หลายปุ่ม
+	}
+		function clean(){
+			var f = document.getElementById('field')			//ฟังชั่นลบปุ่มเมื่อกดปุ่ม clear
+			f.innerHTML = ''
+		}
+	</script>
+</html>

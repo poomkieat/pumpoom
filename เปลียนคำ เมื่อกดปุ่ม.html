@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+	
+<body>
+	<button onClick="change()" id="demo">love</button>
+</body>
+<script>
+	function change() {
+		var button = document.getElementById('demo')	//รับข้อมูลจากปุ่ม id demo
+		var current = button.innerText		//รับค่าล่าสุดจากปุ่มและเปลี่ยน Text ในปุ่ม
+		if (current == 'love') (button.innerText = 'hate')		//เปลี่ยนคำว่า love เป็น hate
+		if (current == 'hate') (button.innerText = 'love')
+	}
+</script>
+</html>
