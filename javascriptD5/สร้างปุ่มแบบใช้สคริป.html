@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<div id="page">...</div>
+</body>
+	<script>
+		
+	var page = document.getElementById('page')		
+	page.innerHTML = page.innerHTML + '<button>first</button>'		//เรียกปุ่มแรกชื่อ frist
+	
+	var i = 1
+	while (i <= 3){ 		
+		page.innerHTML = page.innerHTML + '<button>' + i + '</button>'		//เรียกปุ่มถัดมา 3 ปุ่ม โดนปุ่มแรกเริ่มจาก 1
+		i = i + 1
+	}
+		
+		page.innerHTML = page.innerHTML + '<button>last</button>'		//ปุ่มสุดท้ายชื่อ last
+	
+	</script>
+</html>
