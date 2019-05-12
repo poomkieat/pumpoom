@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>icar</title>
+        <meta charset = 'utf-8'>
+    </head>
+    <body>
+        <pre id='result'></pre>
+
+        <select id='user'></select>
+
+        <select id='book'></select>
+
+        <pre id='over'></pre>
+
+        <pre id='result'></pre>
+
+        <input id='city'>
+        <button onclick='search()'>serach</button>
+        <div id='result'></div>
+    <script>
+        /*
+        var element = document.getElementById('result')
+        var  a = ['mark','bill','elon','jeff','donald']
+        a.push('jame')
+        a.sort()
+        var select = document.getElementById('user')
+        for (var i in a){ //ไล่แบบ abc
+        select.innerHTML += '<option>' + a[i] + '</option>'
+        }
+        for (var i of a){ //ไล่ตามข้อมูลใน array
+        select.innerHTML += '<option>' + i + '</option>'
+        }
+kkkk
+        var coffee =['latte','mocha','latte','espresso'] //หาคำว่า latte ใน array บอกว่ามีกี่ตัวเป็นตัวเลข
+        var count = 0
+        for (var i in coffee){
+            if (coffee[i] == 'latte'){
+                count = count + 1
+            }
+        }
+        alert(count)
+kkkk
+        var element = document.getElementById('result') //เรียงตามตัวเลข
+        var year = [8,12,11,9,9,10]
+        year.sort(compare)
+        //year.sort((x,y) => x - y )
+            for (var i in year){
+                element.innerText += year[i] + '\n'
+            }
+        /*function compare(x,y){
+            if (x < y) return -1
+            if (x > y) return +1
+            return 0
+        }
+        function compare(x,y) { return x - y }
+xxx
+        var data = [ {title : 'astronomy' ,price : 160},
+                     {title : 'biology'   ,price : 175},
+                     {title : 'chemistry' ,price : 170} ]
+        data.sort(cmp)
+        var item = document.getElementById('book')
+            //item.innerHTML += '<option>' + data[1].title + '<option>
+        for (var i in data) { 
+            item.innerHTML += '<option>' + data[i].title + '<option>
+        }
+        function cmp(x,y){
+            return (x.price - y.price)
+        }
+xxx
+        var element = document.getElementById('over')
+        var truck = [23.5,24.8,25.3,27.6,24.3,26.1,25.2,17.9,22.7] //แสดงที่มากกว่า 25
+        for (var i in truck){
+            if (truck[i] > 25.0){
+            element.innerHTML += truck[i] + '\n'
+            }
+        }*/
+kkkk
+    var area = [23.5,24.8,25.3,27.6,24.3,26.1,25.2,17.9,22.7]
+    area.sort( (x,y) => x - y )
+    var a = 0.0
+    var b = 0.0
+    var result = document.getElementById('result')
+    for (var i in area) {
+        if (i % 2 == 0){
+        result.innerHTML += area[i] + '\n'
+        a = a + area[i]
+        }
+        if (i % 2 != 0) {
+        result.innerHTML += '<u>' + area[i] + '</u>' '\n'
+        b += area[i]
+        }
+    }
+    result.innerHTML += 'A = ' + a.toFixed(2) + '\n'
+    result.innerHTML += 'B = ' + b.toFixed(2) + '\n'
+xxx
+    var area = ['dusit','bangplad','talingchan','bangyai','rangsit']
+        function search(){
+            var element  = document.getElementById('city')
+            //alert( element.value )
+            var found = 'no'
+            for (var i in area){
+                if (area[i] <= element.value) {
+                    found = 'yes'
+            }
+        }
+            doucument.getElementById('result').innerHTML = found
+}
+kkkk
+    </script>
+    </body>
+</html>
