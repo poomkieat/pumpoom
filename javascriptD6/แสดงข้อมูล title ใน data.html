@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>icar</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<select id = "book"></select>
+    
+<script>
+	var data = [ {title : 'astronomy' ,price : 160},{title : 'biology' ,price : 175},{title : 'chemistry' ,price : 170} ]
+	data.sort(cmp)
+
+	var item = document.getElementById('book')
+	for (var i in data) {
+		item.innerHTML += '<option>' + data[i].title + '</option>'
+	}
+	function cmp(x,y) {
+		return (x.price - y.price)
+	}	
+</script>
+</body>
+</html>

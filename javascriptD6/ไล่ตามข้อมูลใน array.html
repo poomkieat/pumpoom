@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>icar</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<pre id="result"></pre>
+    	<select id="user"></select>
+    
+<script>
+	var element = document.getElementById('result')
+        var  a = ['mark','bill','elon','jeff','donald']
+        a.push('jame')
+        var select = document.getElementById('user')
+        
+        for (var i of a) { //ไล่ตามข้อมูลใน array
+	select.innerHTML += '<option>' + i + '</option>'
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>icar</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input id = "city">
+	<button onclick = "search()">search</button>
+	<div id = "result"><div>
+    
+<script>
+	var area = ['dusit','bangplad','talingchan','bangyai','rangsit']
+	function search() {
+		var element = document.getElementById('city')
+		//alert (element.value)
+		var found = 'no'
+		for (var i in area) {
+			if (area[i] <= element.value) {
+				found = 'yes'
+			}
+		}
+		document.getElementById('result').innerHTML = found
+	}
+</script>
+</body>
+</html>

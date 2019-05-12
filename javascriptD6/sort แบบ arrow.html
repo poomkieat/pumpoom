@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>icar</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<pre id = "result"></pre>
+    
+<script>
+	var area = [23.5,24.8,25.3,27.6,24.3,26.1,25.2,17.9,22.7]
+	area.sort( (x,y) => x - y )
+	var a = 0.0
+	var b = 0.0
+	var result = document.getElementById('result')
+	for (var i in area) {
+		if (i % 2 == 0) {
+		result.innerHTML += area[i] + '\n'
+		a = a + area[i]
+		}
+		if (i % 2 != 0) {
+		result.innerHTML += '<u>' + area[i] + '</u>' + '\n'
+		b += area[i]
+		}
+	}
+	result.innerHTML += 'A = ' + a.toFixed(2) + '\n'
+	result.innerHTML += 'B = ' + b.toFixed(2) + '\n'
+	
+</script>
+</body>
+</html>
